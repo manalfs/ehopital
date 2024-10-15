@@ -1,0 +1,78 @@
+body {
+    background: #1c242d;
+    background-image: url('https://img.freepik.com/vecteurs-libre/medical-soins-sante-couleur-bleue_1017-26807.jpg?w=900&t=st=1681695882~exp=1681696482~hmac=1213995dc109e476bcbb5841bdc4a6a487757abc24c598712d25dc934975f1b8');
+  }
+  .box {
+    
+    border: 1px solid #c4c4c4;
+    padding: 30px 25px 10px 25px;
+    
+    margin: 30px auto;
+    width: 360px;
+  }
+  h1.box-logo a {
+    text-decoration:none;
+  }
+  h1.box-title {
+    color: #1c1a1a;
+    font-weight: bold;
+    font-weight: 300;
+    padding: 15px 25px;
+    line-height: 30px;
+    font-size: 25px;
+    text-align:center;
+    margin: -27px -26px 26px;
+  }
+  .box-button {
+    border-radius: 5px;
+    background: #4187c8;
+    text-align: center;
+    cursor: pointer;
+    font-size: 19px;
+    width: 100%;
+    height: 51px;
+    padding: 0;
+    color: #fff;
+    border: 0;
+    outline:0;
+  }
+  .box-register
+  {
+    text-align:center;
+    margin-bottom:0px;
+  }
+  .box-register a
+  {
+    text-decoration:none;
+    font-size:12px;
+    color:#666;
+  }
+  .box-input {
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+    padding-left:10px;
+    border-radius: 5px;
+    width: 347px;
+    height: 50px;
+  }
+  .box-input:focus {
+      outline: none;
+      border-color:#5c7186;
+  }
+  .sucess{
+    text-align: center;
+    color: white;
+  }
+  .sucess a {
+    text-decoration: none;
+    color: #58aef7;
+  }
+  p.errorMessage {
+      background-color: #e66262;
+      border: #AA4502 1px solid;
+      padding: 5px 10px;
+      color: #FFFFFF;
+      border-radius: 3px;
+  }

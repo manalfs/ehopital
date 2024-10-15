@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Médecins Consultés</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-image: url('https://img.freepik.com/vecteurs-libre/medical-soins-sante-couleur-bleue_1017-26807.jpg?w=900&t=st=1681695882~exp=1681696482~hmac=1213995dc109e476bcbb5841bdc4a6a487757abc24c598712d25dc934975f1b8');
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .logo {
+      font-size: 25px;
+    }
+
+    .logo a {
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: #547db3;
+    }
+
+    .menu a {
+      position: relative;
+      margin: 0 10px;
+      text-decoration: none;
+      color: #847f7f;
+      transition: 0.5s;
+    }
+
+    .menu a:before {
+      position: absolute;
+      top: -2px;
+      content: "";
+      width: 0;
+      height: 2px;
+      background-color: #547db3;
+      transition: 0.5s;
+    }
+
+    .menu a:hover:before {
+      width: 100%;
+      height: 30%;
+    }
+
+    .menu a:hover {
+      color: #000;
+    }
+
+    h1 {
+      color: #333333;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+    }
+
+    footer {
+      padding: 10px;
+      text-align: center;
+      color: #666666;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <a href="index.php">
+        <span>E</span>hôpital
+      </a>
+    </div>
+    <ul class="menu"> 
+    </ul>
+  </header>
+
+  <main>
+    <canvas id="chart"></canvas>
+  </main>
+
+  <footer>
+    <p>Tous droits réservés &copy; 2023</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var ctx = document.getElementById("chart").getContext("2d");
+
+      var data = {
+        labels: ["Dr.Christian Breymann", "Dr.Omar Shebl", "Dr.Joerg Zehetner", "Dr.thomas Riester", "Dr.Micheal Tamm", "Dr.Richard Berger", "Dr.Andreas Raab", "Dr.Christoph Bamberger", "Dr.Ulrich Griffin", "Dr.Jochem Heibach", "Dr.Jochem Heibach", "Dr.Matthias Bolz", "Dr.Christian Taube", "Dr.", "Dr.Arun kumarasamy", "Dr.Ludwing Heindel", "Dr.Juergen Weber", "Dr.Sükrettin Güldtuna"],
+        datasets: [{
+          label: "Nombre de consultations",
+          data: [30, 45, 13, 29, 10, 18, 3, 27, 20, 22, 14, 8, 7, 20, 25, 30, 6],
+          backgroundColor: ["#007bff", "#ff8000","#808080"]
+        }]
+      };
+
+      var options = {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            stepSize: 5
+          }
+        }
+      };
+
+      var chart = new Chart(ctx, {
+        type: "bar",
+        data: data,
+        options: options
+      });
+    });
+  </script>
+</body>
+</html>
